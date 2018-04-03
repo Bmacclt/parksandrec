@@ -1,0 +1,34 @@
+{
+  "name": "parksandrec",
+  "version": "1.0.0",
+  "description": "park and playground app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmacclt/parksandrec.git"
+  },
+  "keywords": [
+    "park",
+    "trails",
+    "fun"
+  ],
+  "author": "SJBB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bmacclt/parksandrec/issues"
+  },
+  "homepage": "https://github.com/Bmacclt/parksandrec#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "googlemaps": "^1.12.0",
+    "handlebars": "^4.0.11",
+    "mysql2": "^1.5.3",
+    "twitter": "^1.7.1"
+  }
+}

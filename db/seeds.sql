@@ -1,0 +1,1 @@
+-- ski -- create table seeds
