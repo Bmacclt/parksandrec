@@ -1,6 +1,7 @@
 // shaun -- routes 
 // express router 
 // git database 
+<<<<<<< HEAD
 var db = require("../models");
 
 module.exports = function(app) {
@@ -19,3 +20,14 @@ module.exports = function(app) {
   
   };
 
+=======
+
+
+var express = require('express');
+var routerExpress = require('router-express');
+
+
+var app = express() 
+
+var routes = []
+>>>>>>> 23b2b073b5ee5ee60b7c1a7a5b696b75883dbe47

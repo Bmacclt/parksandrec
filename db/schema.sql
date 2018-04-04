@@ -1,1 +1,0 @@
--- mister ski create schema for easy read 
