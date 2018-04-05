@@ -26,61 +26,61 @@ module.exports = function (sequelize, DataTypes) {
 
     });
     Park.associate = function(models) {
-        Park.hasMany(models.BasketBall, {
+        Park.hasOne(models.BasketBall, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.Golf, {
+        Park.hasOne(models.Golf, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.Playground, {
+        Park.hasOne(models.Playground, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.Soccer, {
+        Park.hasOne(models.Soccer, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.Tennis, {
+        Park.hasOne(models.Tennis, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.Trails, {
+        Park.hasOne(models.Trails, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.VendingMachines, {
+        Park.hasOne(models.VendingMachines, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.Views, {
+        Park.hasOne(models.Views, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.WaterSports, {
+        Park.hasOne(models.WaterSports, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        Park.hasMany(models.WorkoutGear, {
+        Park.hasOne(models.WorkoutGear, {
           onDelete: "cascade"
         });
       };
