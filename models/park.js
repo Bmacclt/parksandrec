@@ -26,80 +26,60 @@ module.exports = function (sequelize, DataTypes) {
 
     });
     Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.BasketBall, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.Golf, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.Playground, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.Soccer, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.Tennis, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.Trails, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.VendingMachines, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.Views, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.WaterSports, {
           onDelete: "cascade"
         });
       };
 
       Park.associate = function(models) {
-        // Associating Author with Posts
-        // When an Author is deleted, also delete any associated Posts
         Park.hasMany(models.WorkoutGear, {
           onDelete: "cascade"
         });
