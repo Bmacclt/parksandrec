@@ -29,6 +29,7 @@
     "googlemaps": "^1.12.0",
     "handlebars": "^4.0.11",
     "mysql2": "^1.5.3",
+    "sequelize": "^4.37.5",
     "twitter": "^1.7.1"
   }
 }
