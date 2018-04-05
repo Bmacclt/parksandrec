@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     var WaterSports = sequelize.define("WaterSports", {
-        park_name: {
+        parkName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {

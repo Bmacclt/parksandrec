@@ -2,7 +2,11 @@
   "development": {
     "username": "root",
     "password": "root",
+<<<<<<< HEAD
     "database": "",
+=======
+    "database": "parksAndRec",
+>>>>>>> e9b776271698deba504b03b4b3793ee26b2b88fc
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

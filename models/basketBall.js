@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var WorkoutGear = sequelize.define("WorkoutGear", {
+    var BasketBall = sequelize.define("BasketBall", {
         parkName: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -7,22 +7,22 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 50]
             }
         },
-        monkeyBars: {
-            type: DataTypes.BOOLEAN,
+        numberOfCourts: {
+            type: DataTypes.INTERGER,
             allowNull: false,
-            defaultValue: false
+            defaultValue: 0
         }
     });
 
-    WorkoutGear.associate = function(models) {
+    BasketBall.associate = function(models) {
         // We're saying that a Post should belong to an Author
         // A Post can't be created without an Author due to the foreign key constraint
-        WorkoutGear.belongsTo(models.Park, {
+        BasketBall.belongsTo(models.Park, {
           foreignKey: {
             allowNull: false
           }
         });
       };
 
-    return WorkoutGear;
+    return BasketBall;
 };
