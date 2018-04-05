@@ -1,17 +1,17 @@
 module.exports = function (sequelize, DataTypes) {
     var Trails = sequelize.define("Trails", {
-        park_name: {
+        parkName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1, 50]
             }
         },
-        number_of_trails: {
+        numberOfTrails: {
             type: DataTypes.INTERGER,
             allowNull: false
         },
-        avg_length: {
+        avgLength: {
             type: DataTypes.INTERGER,
             allowNull: false
         }

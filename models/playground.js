@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Views = sequelize.define("Views", {
+    var Playground = sequelize.define("Playground", {
         parkName: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -7,32 +7,39 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 50]
             }
         },
-        pond: {
+        groundType: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1, 20]
+            }
+        },
+        swing: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
         },
-        waterfall: {
+        slide: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
         },
-        cliff: {
+        sprayFountain: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
         }
     });
 
-    Views.associate = function(models) {
+    Playground.associate = function(models) {
         // We're saying that a Post should belong to an Author
         // A Post can't be created without an Author due to the foreign key constraint
-        Views.belongsTo(models.Park, {
+        Playground.belongsTo(models.Park, {
           foreignKey: {
             allowNull: false
           }
         });
       };
 
-    return Views;
+    return Playground;
 };
