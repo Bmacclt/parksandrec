@@ -23,13 +23,9 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: false
 
         },
-        lat: {
+        address: {
           type: DataTypes.STRING,
           allowNull: false,
-        },
-        lon: {
-          type: DataTypes.STRING,
-          allowNull: false
         }
 
     });
