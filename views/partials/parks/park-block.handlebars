@@ -1,10 +1,13 @@
+{{#each Park}}
 <li>
-	{{name}}
+	<h2>{{parkName}}</h2>
+	{{}}
 
 	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
-		{{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
+		{{#if soccer }}SLEEP TIME!{{else}}WAKE UP!{{/if}}
 		
 	</button>
 
 	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
 </li>
+{{/each}}

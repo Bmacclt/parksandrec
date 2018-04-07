@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         size: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         handiAcces: {
@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
 
         },
         restrooms: {
-            type: DataTypes.Boolean,
+            type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
 

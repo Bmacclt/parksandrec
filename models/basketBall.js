@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         numberOfCourts: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0
         }

@@ -8,11 +8,11 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         numberOfTrails: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         avgLength: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     });

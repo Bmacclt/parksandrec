@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         numberOfHoles: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: false
         }

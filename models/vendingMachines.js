@@ -8,12 +8,12 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         numberOfDrinkMachines: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0
         },
         numberOfSnackMachines: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0
         }

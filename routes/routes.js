@@ -4,33 +4,49 @@
 var db = require("../models");
 
 module.exports = function(app) {
-<<<<<<< HEAD
     app.get("/", function(req, res) {
-      // Here we add an "include" property to our options in our findAll query
-      // We set the value to an array of the models we want to include in a left outer join
-      // In this case, just db.Post
-      db.Parks.findAll({
-        //include: [db.Post]
-      }).then(function(dbParks) {
-        res.json(dbParks);
+        db.Park.findAll({
+          order:  ["parkName"]
+        }).then(function(dbPark) {
+        // console.log(dbPark[0].dataValues.parkName);
+        // console.log(dbPark[1].dataValues.parkName);
+        // console.log(dbPark[2].dataValues.parkName);
+        // console.log(dbPark.length);
+        var hbsObject = {
+          parks: dbPark
+        };
+                
+        res.render("index", hbsObject);
       });
     });
-  
-  
+
+    app.get("/all-parks", function(req, res) {
+      db.Park.findAll({
+        order:  ["parkName"]
+      }).then(function(dbPark) {
+      var hbsObject = {
+        parks: dbPark
+      };
+              
+      res.render("all-parks", hbsObject);
+      });
+    });
+
+    app.get("/about", function(req, res) {
+      db.Park.findAll({
+        order:  ["parkName"]
+      }).then(function(dbPark) {
+      var hbsObject = {
+        parks: dbPark
+      };
+              
+      res.render("about", hbsObject);
+      });
+    });
+
   };
 
-=======
 
-  app.get("/api/park", function(req, res) {
-    db.Park.findAll({
-
-    }).then(function(dbParks) {
-      res.json(dbPark);
-    });
-  });
  
   
-  };
 
-
->>>>>>> e9b776271698deba504b03b4b3793ee26b2b88fc
