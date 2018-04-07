@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Bmacclt/parksandrec#readme",
   "dependencies": {
+    "@google/maps": "^0.4.6",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
