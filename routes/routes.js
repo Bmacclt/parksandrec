@@ -1,9 +1,8 @@
-// shaun -- routes 
-// express router 
-// git database 
 var db = require("../models");
 
 module.exports = function(app) {
+   //Home Page
+   //=======================================================
     app.get("/", function(req, res) {
         db.Park.findAll({
           order:  ["parkName"]
@@ -20,6 +19,8 @@ module.exports = function(app) {
       });
     });
 
+   //Parks A-Z 
+   //====================================================== 
     app.get("/all-parks", function(req, res) {
       db.Park.findAll({
         order:  ["parkName"]
@@ -32,6 +33,8 @@ module.exports = function(app) {
       });
     });
 
+    //About
+    //=====================================================
     app.get("/about", function(req, res) {
       db.Park.findAll({
         order:  ["parkName"]
@@ -44,6 +47,17 @@ module.exports = function(app) {
       });
     });
 
+    //Add Park
+    //===================================================== 
+    app.get("/add-park", function(req, res) {
+      db.Park.findAll({}).then(function(dbPark) {
+      var hbsObject = {
+        parks: dbPark
+      };
+              
+      res.render("add", hbsObject);
+      });
+    });
   };
 
 
