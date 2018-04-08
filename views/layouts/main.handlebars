@@ -10,8 +10,8 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="./assets/style.css"  />
 		{{!--code below contains google maps api info--}}
-		<script async defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLOMXJ-NKk4X28qsVQ1XjoaPsSW2HzMCs&callback=initMap">
-        </script>
+		{{!-- <script async defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLOMXJ-NKk4X28qsVQ1XjoaPsSW2HzMCs&callback=initMap">
+        </script> --}}
 	</head>
 	<body>
 	<div id="layout">
@@ -50,5 +50,9 @@
 
 		<script src="./assets/logic.js"></script>
 		<script src="./assets/ui.js"></script>
+		{{!--maybe this will work lol--}}
+		<script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key={{AIzaSyCLOMXJ-NKk4X28qsVQ1XjoaPsSW2HzMC}}"></script>
+		<script src="./assets/googlemaps.js"></script>		
+
 	</body>
 </html>
