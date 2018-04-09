@@ -26,7 +26,7 @@ function arrayInfo(place, arrayMarker){
       }	
 	
 	function toggleBball() {
-	var chkPoolLayer = document.getElementById("basketball"); 
+	var chkBballLayer = document.getElementById("basketball"); 
 	if (basketball.checked === true)
 		//Turn layer on 
 		setBballMap(map);          
