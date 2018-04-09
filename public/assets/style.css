@@ -123,7 +123,8 @@ appears on the left side of the page.
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: rgb(4, 39, 1);
+            background: rgb(10, 149, 10);
+            color: #fff;
         }
 
     /*
@@ -202,6 +203,10 @@ small screens.
         .menu-link span:after {
             margin-top: 0.6em;
         }
+
+ .body {
+     min-height: 100%;
+ }
 
 
 /* Extended Grid Styles */
@@ -334,5 +339,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     #map {
         height: 20em;
         border: 3px solid green;
+    }
+}
+
+@media (max-width: 64em){
+    #map {
+        /* height: 40em; */
     }
 }

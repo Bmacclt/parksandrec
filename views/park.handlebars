@@ -4,12 +4,9 @@
     
     <h1>{{parkName}}</h1>
     <h2>{{address}}</h2>
-    <h3>{{size}} Acres </h3>
-    
-    <h2>blurb about park</h2>
-
+    <h3>{{size}} Acres </h3>    
+    <h4>blurb about park</h4>
+    {{> parks/park-block}}
 </div>
-
-{{> parks/park-block}}
 
 {{/with}}

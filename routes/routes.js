@@ -4,7 +4,9 @@ module.exports = function(app) {
    //Home Page
    //=======================================================
     app.get("/", function(req, res) {
-        db.Park.findAll({}).then(function(dbPark) {
+        db.Park.findAll({
+          include: [db.BasketBall]
+        }).then(function(dbPark) {
        
         var hbsObject = {
           parks: dbPark
@@ -13,6 +15,19 @@ module.exports = function(app) {
         res.render("index", hbsObject);
       });
     }); 
+
+    app.get("/api/all", function(req, res) {
+      db.Park.findAll({
+        include: [db.BasketBall]
+      }).then(function(dbPark) {
+     
+      var hbsObject = {
+        parks: dbPark
+      };              
+      // res.render("index", hbsObject);
+      res.json(hbsObject);
+    });
+  }); 
 
    //Parks A-Z 
    //====================================================== 
@@ -76,11 +91,11 @@ module.exports = function(app) {
      //Individual Park Page 
     //=====================================================
 
-    app.get("/parks/:name", function(req, res) {
+    app.get("/:name", function(req, res) {
       db.Park.findOne({
-        where: 
-        {parkName : req.params.name}
-        
+        where: {
+          parkName : req.params.name
+        }        
       }).then(function(dbPark) {     
       var hbsObject = {
         parks: dbPark
@@ -105,8 +120,3 @@ module.exports = function(app) {
     });
 
   };
-
-
- 
-  
-

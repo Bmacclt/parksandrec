@@ -33,20 +33,13 @@
 //===========================================================
 (function(window, document) {
     var location = document.getElementById("location");
-    var select = document.getElementById("select");
     
-    // location.addEventListener("click", function(){
-    //         console.log("location clicked!!");
-    //         // get decice location
-    //     });
-    location.addEventListener("click", function(){
-            console.log("location clicked!!");
-            // get device location
+    var navLinks = document.getElementsByClassName('pure-menu-link');
+    Array.from('pure-menu-link').forEach(function(element) {
+        console.log(element);
         });
-    
-    // select.addEventListener("change", function(e){
-    //         console.log("changed to " + this.value);
-    //     });
+      
+   
     
         
     //fucntion for when a button/pin/title for an individual park page is clicked

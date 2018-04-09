@@ -36,59 +36,59 @@ module.exports = function (sequelize, DataTypes) {
         });
       };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.Golf, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.Golf, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.Playground, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.Playground, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.Soccer, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.Soccer, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.Tennis, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.Tennis, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.Trails, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.Trails, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.VendingMachines, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.VendingMachines, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.Views, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.Views, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.WaterSports, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.WaterSports, {
+      //     onDelete: "cascade"
+      //   });
+      // };
 
-      Park.associate = function(models) {
-        Park.hasOne(models.WorkoutGear, {
-          onDelete: "cascade"
-        });
-      };
+      // Park.associate = function(models) {
+      //   Park.hasOne(models.WorkoutGear, {
+      //     onDelete: "cascade"
+      //   });
+      // };
       
 
     return Park;

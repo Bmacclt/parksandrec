@@ -6,6 +6,7 @@
         menu     = document.getElementById('menu'),
         menuLink = document.getElementById('menuLink'),
         content  = document.getElementById('main');
+   
 
     function toggleClass(element, className) {
         var classes = element.className.split(/\s+/),
@@ -37,12 +38,14 @@
 
     menuLink.onclick = function (e) {
         toggleAll(e);
+        
     };
-
+    
     content.onclick = function(e) {
         if (menu.className.indexOf('active') !== -1) {
             toggleAll(e);
         }
     };
 
+  
 }(this, this.document));
