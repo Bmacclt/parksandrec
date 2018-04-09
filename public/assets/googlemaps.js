@@ -2,8 +2,8 @@ var marker;
 var Bballmarkers = [];
 
     var map = new google.maps.Map(document.getElementById("map"), {
-        center: new google.maps.LatLng(55.6810038, 12.6033823),
-        zoom: 5,
+        center: new google.maps.LatLng(35.227087, -80.843127),
+        zoom: 10,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
         scaleControl: false,
