@@ -14,18 +14,17 @@ module.exports = function(app) {
       });
     }); 
 
-
    //Parks A-Z 
    //====================================================== 
     app.get("/all-parks", function(req, res) {
       db.Park.findAll({        
         order:  ["parkName"]
-        //  include: [db.BasketBall]
+          //  include: [db.BasketBall]
       }).then(function(dbPark) {
       var hbsObject = {
         parks: dbPark
       };
-              
+         
       res.render("all-parks", hbsObject);
       });
     });
@@ -56,20 +55,36 @@ module.exports = function(app) {
       });
     });
 
-    //
+    //Individual Park Page 
     //=====================================================
     app.get("/parks/:name", function(req, res) {
         db.Park.findOne({
           where: 
-          {parkName : req.param.name}
+          {parkName : req.params.name}
+          
         }).then(function(dbPark) {     
         var hbsObject = {
           parks: dbPark
         };
+        // console.log(req.params.name);
+        // console.log(hbsObject);
                 
         res.render("park", hbsObject);
       });
     });
+
+    //All Features
+    //=====================================================
+    app.get("/all-features", function(req, res) {
+      db.Park.findAll({}).then(function(dbPark) {
+      var hbsObject = {
+        parks: dbPark
+      };
+         
+      res.render("all-features", hbsObject);
+      });
+    });
+
   };
 
 

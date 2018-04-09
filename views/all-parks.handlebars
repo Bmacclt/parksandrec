@@ -7,24 +7,11 @@
 <ul class="pure-g">
     {{#each parks}}
     <div class="pure-u-4-5">
-        <h2>{{parkName}}</h2>
+        <a href="/parks/{{parkName}}"><h2>{{parkName}}</h2></a>
         <h6>{{address}}</h6>
         <h6>Acres: {{size}}</h6>
-    <ul class="icon-list">
-        {{#if restrooms}} 
-            <li><a href="#">
-                <img src="./assets/images/png/restrooms.png" class="pure-img icon" alt="Restrooms available">
-            </a></li>
-        {{/if}}
-        {{#if handiAcces}}
-            <li><a href="#">
-                <img src="./assets/images/png/wheelchair-access.png" class="pure-img icon" alt="Wheel Chair Accessible">
-            </a></li>
-        {{/if}}   
-             
-
-          
-    </ul>    
+    {{!-- partial for icon list --}}
+        {{> parks/park-block}}
         
     </div>           
     {{/each}}

@@ -1,13 +1,17 @@
-{{#each Park}}
-<li>
-	<h2>{{parkName}}</h2>
-	{{}}
-
-	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
-		{{#if soccer }}SLEEP TIME!{{else}}WAKE UP!{{/if}}
-		
-	</button>
-
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-</li>
-{{/each}}
+  <ul class="icon-list">
+	{{#if restrooms}} 
+		<li><a href="#">
+			<img src="./assets/images/png/restrooms.png" class="pure-img icon" alt="Restrooms available">
+		</a></li>
+	{{/if}}
+	{{#if handiAcces}}
+		<li><a href="#">
+			<img src="./assets/images/png/wheelchair-access.png" class="pure-img icon" alt="Wheel Chair Accessible">
+		</a></li>
+	{{/if}} 
+	{{!-- {{#if BasketBall}}
+		<li><a href="#">
+			<img src="./assets/images/png/basketball.png" class="pure-img icon" alt="Basketball Court">
+		</a></li>
+	{{/if}} --}}
+ </ul>

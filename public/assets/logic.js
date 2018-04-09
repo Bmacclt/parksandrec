@@ -35,17 +35,14 @@
     var location = document.getElementById("location");
     var select = document.getElementById("select");
     
-<<<<<<< HEAD
     // location.addEventListener("click", function(){
     //         console.log("location clicked!!");
     //         // get decice location
     //     });
-=======
     location.addEventListener("click", function(){
             console.log("location clicked!!");
             // get device location
         });
->>>>>>> f0cf00be39373ad8c15aab20a9bacc528a9f45be
     
     // select.addEventListener("change", function(e){
     //         console.log("changed to " + this.value);

@@ -206,6 +206,7 @@ small screens.
 .pure-g, .pure-u-4-5, .pure-u-1-3 {
     border: 2px solid black;
     text-align: center;
+    border-radius: 10px;
 
 }
 
@@ -242,6 +243,26 @@ button, select {
 .icon-list li {
     display: inline-block;
 }
+
+/* all features list */
+#all-features {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#all-features img {
+   
+}
+
+#all-features li {
+    display: inline-block;
+    /* margin: 0 auto; */
+    /* width: 150px; */
+    overflow: hidden;
+    border-radius: 10px;
+    /* padding-top: 1.5em; */
+}
+
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
