@@ -4,42 +4,23 @@ module.exports = function(app) {
    //Home Page
    //=======================================================
     app.get("/", function(req, res) {
-        db.Park.findAll({
-          order:  ["parkName"]
-        }).then(function(dbPark) {
-        // console.log(dbPark[0].dataValues.parkName);
-        // console.log(dbPark[1].dataValues.parkName);
-        // console.log(dbPark[2].dataValues.parkName);
-        // console.log(dbPark.length);
+        db.Park.findAll({}).then(function(dbPark) {
+       
         var hbsObject = {
           parks: dbPark
         };
                 
         res.render("index", hbsObject);
       });
-    });
-
-
-    app.get("/parks/:id", function(req, res) {
-      db.Park.findOne({}).then(function(dbPark) {
-      // console.log(dbPark[0].dataValues.parkName);
-      // console.log(dbPark[1].dataValues.parkName);
-      // console.log(dbPark[2].dataValues.parkName);
-      // console.log(dbPark.length);
-      var hbsObject = {
-        parks: dbPark
-      };
-              
-      res.render("index", hbsObject);
-    });
-  });
+    }); 
 
 
    //Parks A-Z 
    //====================================================== 
     app.get("/all-parks", function(req, res) {
-      db.Park.findAll({
+      db.Park.findAll({        
         order:  ["parkName"]
+        //  include: [db.BasketBall]
       }).then(function(dbPark) {
       var hbsObject = {
         parks: dbPark
@@ -75,6 +56,20 @@ module.exports = function(app) {
       });
     });
 
+    //
+    //=====================================================
+    app.get("/parks/:name", function(req, res) {
+        db.Park.findOne({
+          where: 
+          {parkName : req.param.name}
+        }).then(function(dbPark) {     
+        var hbsObject = {
+          parks: dbPark
+        };
+                
+        res.render("park", hbsObject);
+      });
+    });
   };
 
 

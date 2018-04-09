@@ -8,17 +8,22 @@
     {{#each parks}}
     <div class="pure-u-4-5">
         <h2>{{parkName}}</h2>
-        <h4>Acres: {{size}}</h4>
+        <h6>{{address}}</h6>
+        <h6>Acres: {{size}}</h6>
     <ul class="icon-list">
         {{#if restrooms}} 
             <li><a href="#">
                 <img src="./assets/images/png/restrooms.png" class="pure-img icon" alt="Restrooms available">
             </a></li>
-        {{/if}}{{#if handiAcces}}
+        {{/if}}
+        {{#if handiAcces}}
             <li><a href="#">
                 <img src="./assets/images/png/wheelchair-access.png" class="pure-img icon" alt="Wheel Chair Accessible">
             </a></li>
-        {{/if}}
+        {{/if}}   
+             
+
+          
     </ul>    
         
     </div>           

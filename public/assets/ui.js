@@ -1,3 +1,5 @@
+//vanilla JS for hamburger menu functionality
+//==================================================
 (function (window, document) {
 
     var layout   = document.getElementById('layout'),

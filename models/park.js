@@ -29,6 +29,7 @@ module.exports = function (sequelize, DataTypes) {
         }
 
     });
+    
     Park.associate = function(models) {
         Park.hasOne(models.BasketBall, {
           onDelete: "cascade"
