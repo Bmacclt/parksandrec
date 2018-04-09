@@ -3,52 +3,52 @@
     <h1>Charlotte Parks</h1>
     <h2>Use your device location or pick an activity to get started!</h2>
 </div>
-{{!Incorporate google maps code, starts with the floating-pannel. tried a few different methods and a few different variations,
-didn't work }}
+<br>
+      {{!Incorporate google maps code, starts with the floating-pannel. tried a few different methods and a few different variations,
+             didn't work }}
     <div class="content">
-        <div class="pure-g"></div>  
+        {{!-- <div class="pure-g"></div>   --}}
          {{!-- <div id="floating-panel">
         <input id="address" type="textbox" value="Sydney, NSW">
         <input id="submit" type="button" value="Geocode">
         </div> --}}
-            <div id="map" class="pure-u-5-5"> </div>
-            <br>
-            <div class="pure-u-5-5" id="buttons">
-                <button class="pure-button pure-button-primary" id="location">
-                    <i class="material-icons">location_on</i> Parks near me 
-                </button>                    
-                <br>                   
-                    {{!-- <radio value="" disabled selected>Select a Feature</radio> --}}
-                    <label class="container" value="basketball">Basketball<input type="checkbox">
-                    <label class="container" onclick="toggleBball()" id="basketball" value="basketball">Basketball<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="golf">Golf<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="playgrounds">Playgrounds<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="soccer">Soccer<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="tennis">Tennis<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="trails">Trails<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="vending-machines">Vending Machines<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="views">Scenic Views<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                    <label class="container" value="water-activities">Water Activities<input type="checkbox">
-                    <span class="checkmark"></span></label> 
-                     <label class="container" value="accessible">Wheel Chair Accessible<input type="checkbox">
-                    <span class="checkmark"></span></label>
-                     <label class="container" value="workout-gear">Workout Gear<input type="checkbox">
-                    <span class="checkmark"></span></label>                                                                                                                       
-                  
+        <div id="map" class="pure-u-5-5"> </div>
 
-                </div>
+        <br>
+        <div class="pure-g no">
+          <button class="pure-button pure-button-primary" id="location">
+            <i class="material-icons">location_on</i> Parks near me 
+        </button>  
+        </div>        
+                            
+        <br>  
+
+        <form class="pure-form-stacked pure-g" id="form-boxes">               
+            {{!-- <radio value="" disabled selected>Select a Feature</radio> --}}
+            <div class="pure-control-group pure-u-1-2">
+                <input type="checkbox">Basketball<label class="container" value="basketball"><span class="checkmark"></span></label>
+                {{!-- <label class="container" onclick="toggleBball()" id="basketball" value="basketball">Basketball<input type="checkbox"> --}}
+                <input type="checkbox">Golf<label class="container" value="golf"><span class="checkmark"></span></label>
+                <input type="checkbox">Playgrounds<label class="container" value="playgrounds"><span class="checkmark"></span></label>
+                <input type="checkbox">Soccer<label class="container" value="soccer"><span class="checkmark"></span></label>
+                <input type="checkbox">Tennis<label class="container" value="tennis"><span class="checkmark"></span></label>
+                    <input type="checkbox">Trails<label class="container" value="trails"><span class="checkmark"></span></label>
             </div>
-        </div>                     
 
+            <div class="pure-control-group pure-u-1-2">
+                
+                <input type="checkbox">Vending<label class="container" value="vending-machines"> <span class="checkmark"></span></label>
+                <input type="checkbox"> Scenic Views <label class="container" value="views"><span class="checkmark"></span></label>
+                <input type="checkbox">Water Activities<label class="container" value="water-activities"><span class="checkmark"></span></label>
+                <input type="checkbox">Wheel Chair Accessible<label class="container" value="accessible"><span class="checkmark"></span></label>
+                <input type="checkbox">Workout Gear<label class="container" value="workout-gear"><span class="checkmark"></span></label>                                                                                                                       
+            </div>
+
+            <input type="submit" id="map-check" class="pure-u-3-5">
+        </form>
+                
     </div>
+       
     
 
            

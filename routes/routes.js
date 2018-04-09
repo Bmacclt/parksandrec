@@ -55,12 +55,12 @@ module.exports = function(app) {
       });
     });
 
-    //Individual Park Page 
+    //Individual Feature Page -- need a features table
     //=====================================================
-    app.get("/parks/:name", function(req, res) {
-        db.Park.findOne({
+    app.get("/features/:feature", function(req, res) {
+        db.Park.findAll({ 
           where: 
-          {parkName : req.params.name}
+          {parkName : req.params.feature}
           
         }).then(function(dbPark) {     
         var hbsObject = {
@@ -72,6 +72,25 @@ module.exports = function(app) {
         res.render("park", hbsObject);
       });
     });
+
+     //Individual Park Page 
+    //=====================================================
+
+    app.get("/parks/:name", function(req, res) {
+      db.Park.findOne({
+        where: 
+        {parkName : req.params.name}
+        
+      }).then(function(dbPark) {     
+      var hbsObject = {
+        parks: dbPark
+      };
+      // console.log(req.params.name);
+      // console.log(hbsObject);
+              
+      res.render("park", hbsObject);
+    });
+  });
 
     //All Features
     //=====================================================
