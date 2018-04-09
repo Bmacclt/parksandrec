@@ -28,19 +28,27 @@
         <h1>Charlotte Parks</h1>
         <h2>Use your device location or pick an activity to get started!</h2>
     </div>
-
+{{!Incorporate google maps code, starts with the floating-pannel. tried a few different methods and a few different variations,
+didn't work }}
     <div class="content">
-        <div class="pure-g">
-            <div id="map" class="pure-u-5-5">Map Here</div>
+        <div class="pure-g"></div>  
+         {{!-- <div id="floating-panel">
+        <input id="address" type="textbox" value="Sydney, NSW">
+        <input id="submit" type="button" value="Geocode">
+        </div> --}}
+            <div id="map" class="pure-u-5-5"> </div>
             <br>
             <div class="pure-u-5-5" id="buttons">
                 <button class="pure-button pure-button-primary" id="location">
                     <i class="material-icons">location_on</i> Parks near me 
                 </button>                    
                 <br>                   
-                {{!-- <select id="select"> --}}
                     {{!-- <radio value="" disabled selected>Select a Feature</radio> --}}
+<<<<<<< HEAD
                     <label class="container" value="basketball">Basketball<input type="checkbox">
+=======
+                    <label class="container" onclick="toggleBball()" id="basketball" value="basketball">Basketball<input type="checkbox">
+>>>>>>> f0cf00be39373ad8c15aab20a9bacc528a9f45be
                     <span class="checkmark"></span></label>
                     <label class="container" value="golf">Golf<input type="checkbox">
                     <span class="checkmark"></span></label>
@@ -73,8 +81,9 @@
                     <option value="water-activities">Water Activities </option>
                     <option value="accessible">Wheel Chair Accessible </option> --}}
                     <!-- Change name to fitness/ gym equipment -->
-                    {{!-- <option value="workout-gear">Workout Gear</option> --}}
-                </select> 
+                    {{!-- <option value="workout-gear">Workout Gear</option> --}} 
+
+                </div>
             </div>
         </div>                     
 
