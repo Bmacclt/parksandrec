@@ -18,7 +18,7 @@ function arrayInfo(place, arrayMarker){
 
     //code for each checkbox
 
-    // pool array.
+
     function setBballMap(map) {
         for (var i = 0; i < Bballmarkers.length; i++) {
           Bballmarkers[i].setMap(map);
@@ -28,9 +28,9 @@ function arrayInfo(place, arrayMarker){
 	function toggleBball() {
 	var chkBballLayer = document.getElementById("basketball"); 
 	if (basketball.checked === true)
-		//Turn layer on 
+		
 		setBballMap(map);          
 	else
-		//Turn layer off 
+		
 		setBballMap(null);  
 	}
