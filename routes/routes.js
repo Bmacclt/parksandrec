@@ -16,7 +16,7 @@ module.exports = function(app) {
           parks: dbPark
         };
                 
-        res.render("index", hbsObject);
+        res.render("index", hbsObject); //change this back to
       });
     });
 
@@ -41,6 +41,18 @@ module.exports = function(app) {
       };
               
       res.render("about", hbsObject);
+      });
+    });
+
+    app.get("/form", function(req, res) {
+      db.Park.findAll({
+        order:  ["parkName"]
+      }).then(function(dbPark) {
+      var hbsObject = {
+        parks: dbPark
+      };
+              
+      res.render("form", hbsObject);
       });
     });
 
