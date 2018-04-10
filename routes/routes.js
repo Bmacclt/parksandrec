@@ -16,16 +16,10 @@ module.exports = function(app) {
       });
     }); 
 
-    app.get("/api/all", function(req, res) {
-      db.Park.findAll({
-        include: [db.BasketBall]
-      }).then(function(dbPark) {
-     
-      var hbsObject = {
-        parks: dbPark
-      };              
+    app.get("/api/basketball", function(req, res) {
+      db.Park.findAll({include: [db.BasketBall]}).then(function(dbPark) {               
       // res.render("index", hbsObject);
-      res.json(hbsObject);
+      res.json(dbPark);
     });
   }); 
 

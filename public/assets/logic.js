@@ -36,7 +36,7 @@
     
     var navLinks = document.getElementsByClassName('pure-menu-link');
     Array.from('pure-menu-link').forEach(function(element) {
-        console.log(element);
+        // console.log(element);
         });
       
    

@@ -18,7 +18,9 @@ module.exports = function (sequelize, DataTypes) {
         // We're saying that BasketBall should belong to Park
         // A bball can't be created without a Park due to the foreign key constraint
         BasketBall.belongsTo(models.Park, {
-          foreignKey: 'parkName'
+          foreignKey: {
+              allowNull: false
+          }
         });
       };
 

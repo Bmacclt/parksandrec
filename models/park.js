@@ -28,74 +28,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     }
 
-<<<<<<< HEAD
-    });
-    
-    Park.associate = function(models) {
-        Park.hasOne(models.BasketBall, {
-          onDelete: "cascade"
-        });
-      };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.Golf, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.Playground, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.Soccer, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.Tennis, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.Trails, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.VendingMachines, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.Views, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.WaterSports, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-
-      // Park.associate = function(models) {
-      //   Park.hasOne(models.WorkoutGear, {
-      //     onDelete: "cascade"
-      //   });
-      // };
-      
-=======
   });
 
   Park.associate = function (models) {
-    Park.hasOne(models.BasketBall, {
+    Park.hasMany(models.BasketBall, {
       onDelete: "cascade"
     });
     Park.hasOne(models.Golf, {
@@ -126,7 +62,6 @@ module.exports = function (sequelize, DataTypes) {
       onDelete: "cascade"
     });
   };
->>>>>>> f944eb6070d1ab67cd9302139f9b061cfb199428
 
   return Park;
 };
