@@ -1,0 +1,15 @@
+{{!-- individual park page --}}  
+{{#with parks}} 
+<div class="header">
+    
+    <h1>{{parkName}}</h1>
+    <h2>{{address}}</h2>
+    <h3>{{size}} Acres </h3>
+    
+    <h2>blurb about park</h2>
+
+</div>
+
+{{> parks/park-block}}
+
+{{/with}}

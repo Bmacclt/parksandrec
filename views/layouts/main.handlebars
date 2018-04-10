@@ -9,6 +9,9 @@
 		{{!-- <script src="https://code.jquery.com/jquery.js"></script>		 --}}
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="./assets/style.css"  />
+		{{!--code below contains google maps api info--}}
+		{{!-- <script async defersrc="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLOMXJ-NKk4X28qsVQ1XjoaPsSW2HzMCs&callback=initMap">
+        </script> --}}
 	</head>
 	<body>
 	<div id="layout">
@@ -27,7 +30,7 @@
 					<li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
 					<li class="pure-menu-item"><a href="/all-parks" class="pure-menu-link">Parks A to Z</a></li>                
 					<li class="pure-menu-item menu-item-divided pure-menu-selected">
-						<a href="#" class="pure-menu-link">Search Activites</a>
+						<a href="/all-features" class="pure-menu-link">Search Features</a>
 					</li>
 					<li class="pure-menu-item"><a href="/about" class="pure-menu-link">About</a></li>
 					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
@@ -42,10 +45,16 @@
 
 	</div>
 	 <footer>
+
      <div>Icons made by <a href="https://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
- 	</footer> 
+ 	
+	 </footer> 
 
 		<script src="./assets/logic.js"></script>
 		<script src="./assets/ui.js"></script>
+		{{!--maybe this will work lol--}}
+		<script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key={{AIzaSyCLOMXJ-NKk4X28qsVQ1XjoaPsSW2HzMC}}"></script>
+		<script src="./assets/googlemaps.js"></script>		
+
 	</body>
 </html>

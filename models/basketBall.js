@@ -15,11 +15,11 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     BasketBall.associate = function(models) {
-        // We're saying that a Post should belong to an Author
-        // A Post can't be created without an Author due to the foreign key constraint
+        // We're saying that BasketBall should belong to Park
+        // A bball can't be created without a Park due to the foreign key constraint
         BasketBall.belongsTo(models.Park, {
           foreignKey: {
-            allowNull: false
+              allowNull: false
           }
         });
       };

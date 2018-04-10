@@ -1,14 +1,11 @@
-// Brian M. 
-// turn off the force true during week 2 or ELSE!
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 var exphbs = require("express-handlebars");
 var db = require("./models");
-//var methodOverride = require("method-override");
+
 
 var PORT = process.env.PORT || 8080;
-
 
 
 // parse application/x-www-form-urlencoded
@@ -29,7 +26,7 @@ app.set("view engine", "handlebars");
 require("./routes/routes.js")(app);
 require("./routes/post.js")(app);
 
-db.sequelize.sync({ force: false}).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
     });
