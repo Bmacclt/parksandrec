@@ -12,7 +12,7 @@ module.exports = function(app) {
           parks: dbPark
         };
                 
-        res.render("index", hbsObject);
+        res.render("index", hbsObject); //change this back to
       });
     }); 
 
