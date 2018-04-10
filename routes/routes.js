@@ -4,20 +4,20 @@ module.exports = function(app) {
    //Home Page
    //=======================================================
     app.get("/", function(req, res) {
-        db.Park.findAll({
-          include: [db.BasketBall]
-        }).then(function(dbPark) {
+        db.AllPark.findAll({}).then(function(dbPark) {
        
         var hbsObject = {
           parks: dbPark
         };
                 
-        res.render("index", hbsObject); //change this back to
+        res.render("index", hbsObject);
       });
     }); 
 
-    app.get("/api/basketball", function(req, res) {
-      db.Park.findAll({include: [db.BasketBall]}).then(function(dbPark) {               
+    app.get("/api/all", function(req, res) {
+      db.Park.findAll({
+        include: [db.BasketBall]
+      }).then(function(dbPark) {               
       // res.render("index", hbsObject);
       res.json(dbPark);
     });
@@ -26,7 +26,7 @@ module.exports = function(app) {
    //Parks A-Z 
    //====================================================== 
     app.get("/all-parks", function(req, res) {
-      db.Park.findAll({        
+      db.AllPark.findAll({        
         order:  ["parkName"]
           //  include: [db.BasketBall]
       }).then(function(dbPark) {
@@ -41,7 +41,7 @@ module.exports = function(app) {
     //About
     //=====================================================
     app.get("/about", function(req, res) {
-      db.Park.findAll({
+      db.AllPark.findAll({
         order:  ["parkName"]
       }).then(function(dbPark) {
       var hbsObject = {
@@ -55,7 +55,7 @@ module.exports = function(app) {
     //Add Park
     //===================================================== 
     app.get("/add-park", function(req, res) {
-      db.Park.findAll({}).then(function(dbPark) {
+      db.AllPark.findAll({}).then(function(dbPark) {
       var hbsObject = {
         parks: dbPark
       };
@@ -67,7 +67,7 @@ module.exports = function(app) {
     //Individual Feature Page -- need a features table
     //=====================================================
     app.get("/features/:feature", function(req, res) {
-        db.Park.findAll({ 
+        db.AllPark.findAll({ 
           where: 
           {parkName : req.params.feature}
           
@@ -86,7 +86,7 @@ module.exports = function(app) {
     //=====================================================
 
     app.get("/:name", function(req, res) {
-      db.Park.findOne({
+      db.AllPark.findOne({
         where: {
           parkName : req.params.name
         }        
@@ -104,7 +104,7 @@ module.exports = function(app) {
     //All Features
     //=====================================================
     app.get("/all-features", function(req, res) {
-      db.Park.findAll({}).then(function(dbPark) {
+      db.AllPark.findAll({}).then(function(dbPark) {
       var hbsObject = {
         parks: dbPark
       };

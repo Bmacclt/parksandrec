@@ -31,7 +31,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Park.associate = function (models) {
-    Park.hasMany(models.BasketBall, {
+    Park.hasOne(models.BasketBall, {
       onDelete: "cascade"
     });
     Park.hasOne(models.Golf, {

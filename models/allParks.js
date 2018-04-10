@@ -33,6 +33,12 @@ module.exports = function (sequelize, DataTypes) {
         defaultValue: false
   
       },
+      dogPark: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+  
+      },
       golf: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
@@ -91,4 +97,4 @@ module.exports = function (sequelize, DataTypes) {
     });
   
     return AllPark;
-  };
+};
