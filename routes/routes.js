@@ -1,91 +1,98 @@
 var db = require("../models");
 
 module.exports = function(app) {
-   //Home Page
-   //=======================================================
-    app.get("/", function(req, res) {
+  //Home Page
+  //=======================================================
+  app.get("/", function(req, res) {
         db.AllPark.findAll({}).then(function(dbPark) {
        
         var hbsObject = {
-          parks: dbPark
+          parks: dbPark,
+          home: {selected : true}
         };
-                
-        res.render("index", hbsObject);
+         res.render("index", hbsObject);
+               
+        
       });
-    }); 
-
-    app.get("/api/all", function(req, res) {
-      db.Park.findAll({
-        include: [db.BasketBall]
-      }).then(function(dbPark) {               
-      // res.render("index", hbsObject);
-      res.json(dbPark);
-    });
   }); 
 
-   //Parks A-Z 
-   //====================================================== 
-    app.get("/all-parks", function(req, res) {
+  //Parks A-Z 
+  //====================================================== 
+  app.get("/all-parks", function(req, res) {
       db.AllPark.findAll({        
         order:  ["parkName"]
-          //  include: [db.BasketBall]
+          
       }).then(function(dbPark) {
       var hbsObject = {
-        parks: dbPark
+        parks: dbPark,
+        az : {selected : true}
       };
          
       res.render("all-parks", hbsObject);
       });
-    });
+  });
 
-    //About
-    //=====================================================
-    app.get("/about", function(req, res) {
-      db.AllPark.findAll({
-        order:  ["parkName"]
-      }).then(function(dbPark) {
-      var hbsObject = {
-        parks: dbPark
-      };
-              
+  //All Features
+  //=====================================================
+  app.get("/all-features", function(req, res) {
+    db.AllPark.findAll({}).then(function(dbPark) {
+    var hbsObject = {
+      parks: dbPark,
+      feat : {selected : true}
+    };
+        
+    res.render("all-features", hbsObject);
+    });
+  });
+
+  //About
+  //=====================================================
+  app.get("/about", function(req, res) {
+    db.AllPark.findAll({
+      order:  ["parkName"]
+    }).then(function(dbPark) {
+    var hbsObject = {
+      parks: dbPark,
+      about : {selected : true}
+    };              
       res.render("about", hbsObject);
-      });
     });
+  });
 
-    //Add Park
-    //===================================================== 
-    app.get("/add-park", function(req, res) {
+  //Add Park
+  //===================================================== 
+  app.get("/add-park", function(req, res) {
       db.AllPark.findAll({}).then(function(dbPark) {
       var hbsObject = {
-        parks: dbPark
+        parks: dbPark,
+        add : {selected : true}
       };
               
       res.render("add", hbsObject);
       });
+  });
+
+  //Individual Feature Page -- need a features table
+  //=====================================================
+  app.get("/features/:feature", function(req, res) {
+    var feature = req.params.feature;
+      db.AllPark.findAll({ 
+        where:  {feature : true}        
+      }).then(function(dbPark) {     
+      var hbsObject = {
+        parks: dbPark
+      };
+      // console.log(req.params.name);
+      // console.log(hbsObject);
+              
+      res.render("feature", hbsObject);
     });
+  });
 
-    //Individual Feature Page -- need a features table
-    //=====================================================
-    app.get("/features/:feature", function(req, res) {
-        db.AllPark.findAll({ 
-          where: 
-          {parkName : req.params.feature}
-          
-        }).then(function(dbPark) {     
-        var hbsObject = {
-          parks: dbPark
-        };
-        // console.log(req.params.name);
-        // console.log(hbsObject);
-                
-        res.render("park", hbsObject);
-      });
-    });
+  //Individual Park Page 
+  //=====================================================
 
-     //Individual Park Page 
-    //=====================================================
-
-    app.get("/:name", function(req, res) {
+  app.get("/:name", function(req, res) {
       db.AllPark.findOne({
         where: {
           parkName : req.params.name
@@ -100,37 +107,37 @@ module.exports = function(app) {
       res.render("park", hbsObject);
     });
   });
+ 
 
-    //Individual Feature Page 
-    //=====================================================
+  //Individual Feature Page 
+  //=====================================================
 
-    app.get("/:activity", function(req, res) {
-      var activity = req.params.activity;
-      db.AllPark.findAll({
-        where: {
-           activity : true
-        }        
-      }).then(function(dbPark) {     
-      var hbsObject = {
-        parks: dbPark
-      };
-      // console.log(req.params.name);
-      // console.log(hbsObject);
-              
-      res.render("feature", hbsObject);
+  app.get("/:activity", function(req, res) {
+    var activity = req.params.activity;
+    db.AllPark.findAll({
+      where: {
+          activity : true
+      }        
+    }).then(function(dbPark) {     
+    var hbsObject = {
+      parks: dbPark
+    };
+    // console.log(req.params.name);
+    // console.log(hbsObject);
+            
+    res.render("feature", hbsObject);
     });
   });
 
-    //All Features
-    //=====================================================
-    app.get("/all-features", function(req, res) {
-      db.AllPark.findAll({}).then(function(dbPark) {
-      var hbsObject = {
-        parks: dbPark
-      };
-         
-      res.render("all-features", hbsObject);
-      });
-    });
+  // API All
+  //=======================================================
+  app.get("/api/all", function(req, res) {
+    db.Park.findAll({
+      order: ["parkName"]
+    }).then(function(dbPark) {               
+    
+    res.json(dbPark);
+  });
+}); 
 
   };

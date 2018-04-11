@@ -1,6 +1,10 @@
 /* john   */
 body {
     color: #777;
+    position:relative;
+    
+    bottom: 3.5em;
+    
 }
 
 .pure-img-responsive {
@@ -54,6 +58,7 @@ The content `<div>` is where all your content goes.
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
+     margin-top: 0.5em;
      
  }
     .header h1 {
@@ -305,19 +310,30 @@ footer {
 #all-features {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 3em;
 }
 
 #all-features img {
-   
+   border: 2px solid black;
+   float: left;
+
 }
 
 #all-features li {
     display: inline-block;
+    border: 2px solid green;
+    margin: 1em;
+    padding: 1em;
+    text-align: left;
+    
     /* margin: 0 auto; */
     /* width: 150px; */
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 10px;
     /* padding-top: 1.5em; */
+}
+#all-features h3 {
+    padding-left: 4.5em;
 }
 
 

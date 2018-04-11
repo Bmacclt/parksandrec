@@ -3,6 +3,7 @@
 </div>
 <ul class="pure-g">
     {{#each parks}}
+    {{#if feature}}
     <div class="pure-u-4-5 a-z">
         <a href="/{{parkName}}"><h2>{{parkName}}</h2></a>
         <h6>{{address}}</h6>
@@ -10,6 +11,7 @@
         {{!-- partial for icon list --}}
         {{> parks/park-block}}
         
-    </div>           
+    </div> 
+    {{/if}}          
     {{/each}}
 </ul>
