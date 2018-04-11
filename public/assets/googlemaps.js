@@ -1,3 +1,15 @@
+var googleMapsClient = require('@google/maps').createClient({
+    key: 'AIzaSyCLOMXJ-NKk4X28qsVQ1XjoaPsSW2HzMC'
+  });
+
+  googleMapsClient.geocode({
+    address: '1600 Amphitheatre Parkway, Mountain View, CA'
+  }, function(err, response) {
+    if (!err) {
+      console.log(response.json.results);
+    }
+  });
+  
 var marker;
 // var Bballmarkers = [];
 
@@ -39,7 +51,7 @@ var marker;
         'grab addresses from parks with activities'
 
         return address})
-        
+
     })
 
     
