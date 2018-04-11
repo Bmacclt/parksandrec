@@ -31,4 +31,6 @@ app.get("/api/parks", function(req, res) {
 //db.park.findall and res.json
 //then we go to googlemaps.js, create an ajax call to call the api route
 //on success, add markers
-  
+
+
+//
