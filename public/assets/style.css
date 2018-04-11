@@ -266,16 +266,16 @@ footer {
 
 /* Form/Index Styles */
 /* =============================================================================== */
-#form-boxes {
+.form-boxes {
     text-align: left;
     padding-left: 1em;
 }   
 
-#form-boxes input {
+.form-boxes input {
     margin: .5em auto;
 }
 
-#location {
+.submit-btn {
     margin: 1em auto;
     border-radius: 10px;
 
@@ -286,9 +286,20 @@ footer {
     border: 2px solid green;
     border-radius: 15px;
 }
+
+#map-check {
+    margin: .5em auto;
+}
+
 .no {
     border: none;
 }
+
+
+
+/* .add-park .pure-g input {
+    text-align: left;
+} */
 
 
 
@@ -374,10 +385,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         left: 150px;
     }
 
-    /* #map {
-        height: 20em;
-        border: 3px solid green;
-    } */
+
 }
 
 @media (max-width: 48em) {
