@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
         }
       },
       size: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
       },
       handiAcces: {
