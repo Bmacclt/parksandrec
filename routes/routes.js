@@ -101,6 +101,26 @@ module.exports = function(app) {
     });
   });
 
+    //Individual Feature Page 
+    //=====================================================
+
+    app.get("/:activity", function(req, res) {
+      var activity = req.params.activity;
+      db.AllPark.findAll({
+        where: {
+           activity : true
+        }        
+      }).then(function(dbPark) {     
+      var hbsObject = {
+        parks: dbPark
+      };
+      // console.log(req.params.name);
+      // console.log(hbsObject);
+              
+      res.render("feature", hbsObject);
+    });
+  });
+
     //All Features
     //=====================================================
     app.get("/all-features", function(req, res) {

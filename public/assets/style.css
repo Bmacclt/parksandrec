@@ -222,6 +222,42 @@ small screens.
     margin: 2em auto;
 }
 
+footer { 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5.5em;    
+    background-color: green;
+    color: white;
+    text-align: center; 
+    font-size: 1em;   
+}
+
+.social svg {
+    margin:.2em .5em 0 .5em;
+   }
+
+.social a, .social a:visited {
+    color: white;
+}
+
+.cred  {
+   color: green;
+    margin-bottom: .1em;
+    margin-top: .5em;
+}
+
+.cred a, .cred a:focus, .cred a:visited{
+    text-decoration: none;
+    color: green;
+}
+.cred:hover, .cred a:hover {
+    background: rgb(14, 182, 14);
+    color: white;
+}
+
+
 
 /* Form/Index Styles */
 /* =============================================================================== */
@@ -343,7 +379,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 @media (max-width: 64em){
-    #map {
-        /* height: 40em; */
-    }
+    
+}
+@media (max-width: 80em){
+    
 }
