@@ -130,16 +130,8 @@ module.exports = function(app) {
     });
   });
 
-  // API All
-  //=======================================================
-  app.get("/api/parks", function(req, res) {
-    db.AllPark.findAll({
-      order: ["parkName"]
-    }).then(function(dbPark) {               
-    
-    res.json(dbPark);
-    });
-  }); 
+  // API Post
+  //======================================================= 
 
   app.post("/api/parks", function(req, res) {
     db.AllPark.create(req.body).then(function(dbPark) {

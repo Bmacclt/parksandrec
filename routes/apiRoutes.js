@@ -1,6 +1,16 @@
 var db = require("../models");
 
 module.exports = function (app) {
+
+    app.get("/api/parks", function (req, res) {
+        db.AllPark.findAll({
+            order: ["parkName"]
+        }).then(function (dbPark) {
+
+            res.json(dbPark);
+        });
+    });
+
     app.get("/api/:name", function (req, res) {
         db.AllPark.findOne({
             where: {
@@ -10,12 +20,17 @@ module.exports = function (app) {
             var hbsObject = {
                 parks: dbPark
             };
-            res.json(hbsObject); 
+            res.json(hbsObject);
         })
     });
 
-    app.get("/api/all", function (req, res) {
-        db.AllPark.findAll({}).then(function (dbPark) {
+
+    app.get("/api/basketball", function (req, res) {
+        db.AllPark.findAll({
+            where: {
+                basketball: true
+            }
+        }).then(function (dbPark) {
             var hbsObject = {
                 parks: dbPark
             };
