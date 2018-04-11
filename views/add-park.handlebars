@@ -1,0 +1,59 @@
+<div class="header">
+        <h1> Add a Park </h1>
+        <h2>Add your favorite park to our database </h2>
+</div>
+<div class="pure-g form">
+<form class="pure-form pure-form-stacked add-park" action="/api/parks" target="_blank" method="POST">
+    <fieldset>
+        <label for="park-name"> Park Name </label>
+        <input type="text" name="parkName" placeholder="Park Name"><br>
+
+        <label for="address"> Address </label>
+        <input type="text" name="address" placeholder="Address"><br>
+
+        <label for="size"> Size  </label>
+        <select type="text" name="size"></select>
+            <option> Small ( < 30 acres)</option>
+            <option> Medium (30 - 70 acres)</option>
+            <option> Large ( > 70 acres)</option>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" name="restrooms"> Restrooms <br>
+        
+        <input type="checkbox" name="basketball"> Basketball <br>
+        <input type="checkbox" name="dogPark"> Dog Park <br>
+        <input type="checkbox" name="golf"> Golf <br>
+        <input type="checkbox" name="handiAces"> Wheelchair Accessible <br>
+        
+        <input type="checkbox" name="playground"> Playgrounds <br>
+        <input type="checkbox" name="soccer"> Soccer <br>
+        <input type="checkbox" name="tennis"> Tennis <br>
+        <input type="checkbox" name="trails"> Hiking Trails <br>
+        <input type="checkbox" name="vendingMachines"> Vending Machines <br>
+        <input type="checkbox" name="views"> Views <br>
+        <input type="checkbox" name="waterSports"> Water Activities <br>
+        <input type="checkbox" name="workoutGear"> Workout Gear <br>
+    </fieldset>
+
+    <label for="pic">Upload a Photo</label>
+    <input type="file" name="pic" accept="image/*" placeholder="Park Photo">
+</form>
+</div>
+    {{!-- image upload input  --}}
+
+
+{{!-- </form>
+
+<form action="/api/parks" target="_blank" method="POST">
+  Park Name:<br>
+  <input type="text" name="parkName">
+  <br>
+  Size:<br>
+  <input type="number" name="size">
+  <br>
+    Handicap Access:<br>
+  <input type="checkbox" name="handiAcces" value="true"><br>
+  Restrooms:<br>
+  <input type="checkbox" name="restrooms" value="true"><br>
+  <input type="submit" value="Submit">
+</form> --}}

@@ -68,7 +68,7 @@ module.exports = function(app) {
         add : {selected : true}
       };
               
-      res.render("add", hbsObject);
+      res.render("add-park", hbsObject);
       });
   });
 
