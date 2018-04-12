@@ -1,4 +1,6 @@
-var marker;
+
+/*
+var marker = [];
 // var Bballmarkers = [];
 
     var map = new google.maps.Map(document.getElementById("map"), {
@@ -34,17 +36,89 @@ var marker;
 		
 	// 	setBballMap(null);  
     // }
-    
+    /*
     var activity = checkbox.click(function(){
         'grab addresses from parks with activities'
 
         return address})
         
-    })
-
     
+
+    */
+   var map, infoWindow;
+   function initMap() {
+       map = new google.maps.Map(document.getElementById("map"), {
+           center: {lat: -34.397, lng: 150.644},
+           zoom: 6
+         });
+         infoWindow = new google.maps.InfoWindow;
+
+         if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+  
+              infoWindow.setPosition(pos);
+              infoWindow.setContent('Location found.');
+              infoWindow.open(map);
+              map.setCenter(pos);
+            }, function() {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
+        }
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                                  'Error: The Geolocation service failed.' :
+                                  'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+          }  
+    
+   /*
     var marker = new google.maps.Marker({
         position: activity,
         map: map, 
         title:address
     });
+    */
+/*
+   var initMap = function() {
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 10
+    });
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var initialLocation = new google.maps.LatLng(
+            position.coords.latitude,
+            position.coords.longitude
+          );
+          map.setCenter(initialLocation);
+        });
+      }
+
+      markers.forEach(function(marker) {
+        console.log(marker);
+        var position = new google.maps.LatLng(marker.lat, marker.lng);
+        var googleMarker = new google.maps.Marker({
+          position: position,
+          title: marker.name,
+          map: map
+        });
+        googleMarker.addListener('click', function() {
+            var infoWindow = new google.maps.InfoWindow({
+              content: '<h3>' + marker.name + '</h3>'
+            });
+            infoWindow.open(map, googleMarker);
+          });
+        });
+      };
+      */
