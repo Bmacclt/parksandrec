@@ -76,38 +76,31 @@ module.exports = function(app) {
   //=====================================================
   app.get("/features/:feature", function(req, res) {
     var feature = req.params.feature;
+    var whereClause = {};
     console.log(feature);
     switch(feature) {
       case "basketball":
           
-          db.findAll({where:
-            {basketball:true},
-            order: ["parkName"]
-          }).then(function(dbPark) {     
-            var hbsObject = {
-              parks: dbPark
-            };
-            res.render("feature", hbsObject);
-         
-            break;
+        whereClause = {basketball : true}; 
+        break;
 
       case "dogPark":
-      
-      db.findAll({where:
-        {basketball:true},
-        order: ["parkName"]
-      }).then(function(dbPark) {     
-        var hbsObject = {
-          parks: dbPark
-        };
-        res.render("feature", hbsObject);
-          break;
+        whereClause = {dogPark : true};    
+        break;
+         
      
     }
-     
+    db.AllPark.findAll({  
+      where: whereClause,  
+      order: ["parkName"]
+    }).then(function(dbPark) {     
+      var hbsObject = {
+        parks: dbPark
+      };
+
+      res.render("feature", hbsObject);
               
-      // res.render("feature", hbsObject);
-    });
+      });
   });
 
   //Individual Park Page 
@@ -155,12 +148,11 @@ module.exports = function(app) {
   //======================================================= 
 
   app.post("/api/parks", function(req, res) {
-    db.AllPark.create(req.body).then(function(dbPark) {
-      res.json(dbPark);
-    
+      db.AllPark.create(req.body).then(function(dbPark) {
+      res.json(dbPark);    
     });
   }); 
 
 
 
-  };
+};
