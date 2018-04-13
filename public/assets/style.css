@@ -1,6 +1,6 @@
 /* john   */
 body {
-    color: #777;
+    background-color: floralwhite;
     position:relative;
     
     bottom: 3.5em;
@@ -276,6 +276,7 @@ footer {
 .form-boxes {
     text-align: left;
     padding-left: 1em;
+    background-color: rgba(13, 138, 13, 0.705);
 }   
 
 .form-boxes input {
@@ -302,6 +303,11 @@ footer {
     border: none;
 }
 
+#layout {
+    
+    background-color: floralwhite;
+}
+
 /*            Icon Stlyes              */
 /* =============================================================================== */
 
@@ -315,7 +321,7 @@ footer {
 }
 
 .icon-list {
-    background-color: rgba(0, 255, 0, 0.4);
+    background-color: #0080009e;
     width: 60%;
     margin: 0 auto;
     position: relative;
@@ -333,10 +339,10 @@ footer {
 /* all features list */
 /* ==================================================================== */
 #all-features {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 3em;
-    background-color: rgb(100, 120, 100, .6);
+    background-color: rgb(100, 120, 100, .5);
 }
 
 #all-features img {
@@ -359,10 +365,11 @@ footer {
 }
 
 .back {
-    background-color: rgba(0, 255, 0, 0.6);
+    background-color: #0080009e;
     width: 60%;
     margin: 0 auto;
     border: .1em solid white;
+    border-radius: .5em;
     padding: .2em;
 }
 
@@ -401,10 +408,22 @@ footer {
         background-image: url("./images/parks/trails.jpg");
         background-position: center;
     }
-    .vending{ background-image: url();}
-    .views{ background-image: url();}
-    .water{ background-image: url();}
-    .gym{ background-image: url();}
+    .vending{ 
+        background-image: url("./images/parks/vending-machines.jpg");
+        background-position: center;
+    }
+    .views{  
+        background-image: url("./images/parks/views.jpg");
+        background-position: center;
+    }
+    .water{ 
+        background-image: url("./images/parks/water.jpg");
+        background-position: center;
+    }
+    .gym{ 
+        background-image: url("./images/parks/gym.jpg");
+        background-position: center;
+    }
 
 
 
@@ -434,6 +453,12 @@ footer {
 /* all-parks display */
 /* ========================================================= */
 
+.all {
+    width: 90%;
+    background-color: rgb(100, 120, 100, .6);
+    margin: 0 auto;
+}
+
 .info {
     background-color:  rgba(30, 167, 26, 0.671);
     width: 55%;
@@ -459,8 +484,12 @@ footer {
     background-color: rgba(31, 167, 26, 0.75);
 }
 
-
-
+/* about */
+/* =============================================================================== */
+.about {
+    width: 90%;
+    margin: 0 auto;
+}
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
