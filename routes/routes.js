@@ -92,7 +92,7 @@ module.exports = function(app) {
       break;
 
       case "handiAcces":
-      whereClause = {handiAceces : true};    
+      whereClause = {handiAcces : true};    
       break;
 
       case "playground":
@@ -126,6 +126,9 @@ module.exports = function(app) {
       case "workoutGear":
       whereClause = {workoutGear : true};    
       break;
+
+      case parkName:
+      whereClause = {parkName : req.param.body}
         
      
     }
@@ -137,7 +140,7 @@ module.exports = function(app) {
         parks: dbPark,
         layout: "main"
       };
-
+     
       res.render("feature", hbsObject);
               
       });
@@ -155,8 +158,7 @@ module.exports = function(app) {
       var hbsObject = {
         parks: dbPark
       };
-      // console.log(req.params.name);
-      // console.log(hbsObject);
+  
               
       res.render("park", hbsObject);
     });

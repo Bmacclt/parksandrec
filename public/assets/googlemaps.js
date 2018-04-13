@@ -1,4 +1,9 @@
-
+var mapCheck = document.getElementById("map-check");
+console.log(mapCheck);
+var form = docment.getElementById("pin-form");  
+var input = document.getElementsByTagName('input');   
+var basketball = document.getElementById("basketball");
+var golf = document.getElementById("golf");
 /*
 var marker = [];
 // var Bballmarkers = [];
@@ -37,14 +42,14 @@ var marker = [];
 	// 	setBballMap(null);  
     // }
     /*
-    var activity = checkbox.click(function(){
+    
+    */
+   var activity = checkbox.click(function(){
         'grab addresses from parks with activities'
 
         return address})
 
     })
-
-    */
    var map, infoWindow;
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -113,11 +118,19 @@ var marker = [];
             infoWindow.open(map, googleMarker);
           });
         };
-      
-var basketball = document.getElementById(basketball);
-var golf = document.getElementById(golf);
 
-$("#basketball").submit(function(){
+
+
+mapCheck.onclick = function(e){
+    e.preventDefault();
+    console.log(e);
+    var length = input.length;
+    console.log(length);
+
+};
+
+
+// $("#basketball").submit(function(){
     db.AllPark.findAll({
         where: {
             basketball : true

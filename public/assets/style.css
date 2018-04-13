@@ -68,7 +68,6 @@ The content `<div>` is where all your content goes.
     }
      .header h2 {
         font-weight: 300;
-        color: #ccc;
         padding: 0;
         margin-top: 0;
     }
@@ -317,7 +316,7 @@ footer {
 
 .icon-list {
     background-color: rgba(0, 255, 0, 0.4);
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     position: relative;
     bottom: .3em;
@@ -337,6 +336,7 @@ footer {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 3em;
+    background-color: rgb(100, 120, 100, .6);
 }
 
 #all-features img {
@@ -353,16 +353,64 @@ footer {
     margin: 1em;
     padding: 1em;
     text-align: left;
+    background-size: cover;
+    border-radius: .5em;
     
-    /* margin: 0 auto; */
-    /* width: 150px; */
-    /* overflow: hidden; */
-    border-radius: 10px;
-    /* padding-top: 1.5em; */
 }
+
+.back {
+    background-color: rgba(0, 255, 0, 0.6);
+    width: 60%;
+    margin: 0 auto;
+    border: .1em solid white;
+    padding: .2em;
+}
+
 #all-features h3 {
     padding-left: 4.5em;
 }
+
+#all-features a:-webkit-any-link {
+    text-decoration: none;
+    color:white;
+}
+    /* all features backgrounds */
+    .bball{ 
+        background-image: url("./images/parks/basketball.jpg");
+        
+    }
+    .dog { 
+        background-image: url("./images/parks/dogpark.jpg");
+        background-position: center;
+    }
+    .golf{ background-image: url("./images/parks/golf.jpg");}
+    .wheelchair{ 
+        background-image: url("./images/parks/wheelchair.jpg");
+        background-position: center;
+    }
+    .play{ 
+        background-image: url("./images/parks/playground.jpg");
+        background-position: center;
+    }
+    .soccer{ background-image: url("./images/parks/soccer.png");}
+    .tennis{ 
+        background-image: url("./images/parks/tennis.jpg");
+        background-position: center;
+    }
+    .trails{ 
+        background-image: url("./images/parks/trails.jpg");
+        background-position: center;
+    }
+    .vending{ background-image: url();}
+    .views{ background-image: url();}
+    .water{ background-image: url();}
+    .gym{ background-image: url();}
+
+
+
+
+/* Add Park Styles */
+/* ===================================================================== */
 
 .add-park {
     margin-bottom: 4em;
@@ -398,13 +446,17 @@ footer {
 }
 
 .box {
-    border: .1em solid white; 
+    border: .2em solid white;
+    margin-bottom: -.2em;
 }
 
 .parcon {
-    border: .2em solid black;
-    width: 80%;
-    margin: 0 auto;
+ padding-top: 1em;
+ 
+}
+
+.parcon ul {
+    background-color: rgba(31, 167, 26, 0.75);
 }
 
 
@@ -468,7 +520,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 /* smallest styles */
 /* ========================================================================= */
-@media (max-width:400px){
+@media (max-width:500px){
+    .icon-list {
+        width: 65%;
+    }
     .icon-list li {
         width: 15%;
         margin: 0 .2em;
@@ -476,7 +531,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         right: 1em;
     }
     .info {
-        width: 70%;
+        width: 65%;
+    }
+
+    .info h2 {
+        font-size: 70%;
+    }
+
+    .info h6 {
+        font-size: 50%;
     }
 
     #all-features li {
@@ -492,8 +555,16 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     #all-features li h3 {
         font-size: 60%;
         position: relative;
-        left: 1em;
+        left: .2em;
     }
+    #all-features img {
+        width: 1.5em;
+    }
+
+    .back {
+        width: 90%;
+    }
+
     .header {
         font-size: 70%;
         margin-top: 2em;
@@ -513,6 +584,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
     .social svg {
        font-size: 2em;
+       margin: .1em;
     }
 }
 /* }
