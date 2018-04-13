@@ -47,9 +47,8 @@ var marker = [];
    var activity = checkbox.click(function(){
         'grab addresses from parks with activities'
 
-        return address})
+        return address});
 
-    })
    var map, infoWindow;
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -118,6 +117,7 @@ var marker = [];
             infoWindow.open(map, googleMarker);
           });
         };
+    });
 
 
 
@@ -135,12 +135,12 @@ mapCheck.onclick = function(e){
         where: {
             basketball : true
         },
-        mapMarker();
-    })
-})
+        mapMarker()
+    });
+// })
 
         
-        var position = new google.maps.address(marker.lat, marker.lng);
-        for (var i = 0; i <AllPark.length; i++) {
-            return AllPark.address
-        }
+        // var position = new google.maps.address(marker.lat, marker.lng);
+        // for (var i = 0; i <AllPark.length; i++) {
+        //     return AllPark.address
+        // }
