@@ -93,29 +93,16 @@ var marker = [];
         title:address
     });
     */
-/*
-   var initMap = function() {
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 10
-    });
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var initialLocation = new google.maps.LatLng(
-            position.coords.latitude,
-            position.coords.longitude
-          );
-          map.setCenter(initialLocation);
-        });
-      }
-
-      markers.forEach(function(marker) {
+     var mapMarker= markers.forEach(function(marker) {
         console.log(marker);
-        var position = new google.maps.LatLng(marker.lat, marker.lng);
+        var position = function (){
+            for (var i = 0; i <marker.length; i++) {
+            return AllPark.address
+        };
         var googleMarker = new google.maps.Marker({
-          position: position,
+          position: position(),
           title: marker.name,
           map: map
         });
@@ -125,6 +112,22 @@ var marker = [];
             });
             infoWindow.open(map, googleMarker);
           });
-        });
-      };
-      */
+        };
+      
+var basketball = document.getElementById(basketball);
+var golf = document.getElementById(golf);
+
+$("#basketball").submit(function(){
+    db.AllPark.findAll({
+        where: {
+            basketball : true
+        },
+        mapMarker();
+    })
+})
+
+        
+        var position = new google.maps.address(marker.lat, marker.lng);
+        for (var i = 0; i <AllPark.length; i++) {
+            return AllPark.address
+        }
