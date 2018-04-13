@@ -15,9 +15,9 @@ app.get("/api/parks", function(req, res) {
 
 
 
-case "dogPark":
-whereClause = {dogPark : true};    
-break;
+// case "dogPark":
+// whereClause = {dogPark : true};    
+// break;
 
 
 
