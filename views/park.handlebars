@@ -1,12 +1,20 @@
 {{!-- individual park page --}}  
 {{#with parks}} 
-<div class="header">
-    
-    <h1>{{parkName}}</h1>
-    <h2>{{address}}</h2>
-    <h3>{{size}} Acres </h3>    
-    <h4>blurb about park</h4>
-    {{> parks/park-block}}
+<div class="header solo" style="background-image: url('./assets/images/png/{{id}}.jpg');">
+    <div class="box">
+        <h1>{{parkName}}</h1>
+        <h2>{{address}}</h2>
+        <h3>size:{{size}}</h3>    
+        <h4>blurb about park</h4>
+    </div>  
 </div>
+
+<div class="parcon">
+       {{> parks/park-block}} 
+    </div>
+
+{{!-- <img src="./assets/images/png/{{id}}.jpg" class="pure-image">
+<img src="./assets/images/png/1.jpg" class="pure-image"> --}}
+
 
 {{/with}}
