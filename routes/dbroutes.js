@@ -3,7 +3,7 @@ var db = require("../models");
 
 module.exports = function(app) {
 app.get("/api/parks", function(req, res) {
-    db.Park.findAll({}).then(function(dbPark) {
+    db.ALLPark.findAll({}).then(function(dbPark) {
         var parkObject = {
             parks: dbPark
         };
