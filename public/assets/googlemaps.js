@@ -52,7 +52,7 @@ var marker = [];
    var map, infoWindow;
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 40.712, lng: 74.0060 },
+                center: { lat: 35.2271, lng: 278.9331 },
                 zoom: 10
             });
             infoWindow = new google.maps.InfoWindow;
@@ -99,44 +99,44 @@ var marker = [];
     */
 
 
-     var mapMarker= markers.forEach(function(marker) {
-        console.log(marker);
-        var position = function (){
-            for (var i = 0; i <marker.length; i++) {
-            return AllPark.address
-        };
-        var googleMarker = new google.maps.Marker({
-          position: position(),
-          title: marker.name,
-          map: map
-        });
-        googleMarker.addListener('click', function() {
-            var infoWindow = new google.maps.InfoWindow({
-              content: '<h3>' + marker.name + '</h3>'
-            });
-            infoWindow.open(map, googleMarker);
-          });
-        };
-    });
+//      var mapMarker= markers.forEach(function(marker) {
+//         console.log(marker);
+//         var position = function (){
+//             for (var i = 0; i <marker.length; i++) {
+//             return AllPark.address
+//         };
+//         var googleMarker = new google.maps.Marker({
+//           position: position(),
+//           title: marker.name,
+//           map: map
+//         });
+//         googleMarker.addListener('click', function() {
+//             var infoWindow = new google.maps.InfoWindow({
+//               content: '<h3>' + marker.name + '</h3>'
+//             });
+//             infoWindow.open(map, googleMarker);
+//           });
+//         };
+//     });
 
 
 
-mapCheck.onclick = function(e){
-    e.preventDefault();
-    console.log(e);
-    var length = input.length;
-    console.log(length);
+// mapCheck.onclick = function(e){
+//     e.preventDefault();
+//     console.log(e);
+//     var length = input.length;
+//     console.log(length);
 
-};
+// };
 
 
 // $("#basketball").submit(function(){
-    db.AllPark.findAll({
-        where: {
-            basketball : true
-        },
-        mapMarker()
-    });
+    // db.AllPark.findAll({
+    //     where: {
+    //         basketball : true
+    //     },
+    //     mapMarker()
+    // });
 // })
 
         
