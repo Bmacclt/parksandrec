@@ -91,7 +91,7 @@ module.exports = function(app) {
       whereClause = {golf : true};    
       break;
 
-      case "handiAceces":
+      case "handiAcces":
       whereClause = {handiAceces : true};    
       break;
 
