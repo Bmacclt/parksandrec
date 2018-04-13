@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "ava",
+    "test:watch": "ava --watch"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,11 @@
     "handlebars": "^4.0.11",
     "mysql2": "^1.5.3",
     "purecss": "^1.0.0",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "sinon": "^4.5.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "nyc": "^11.6.0"
   }
 }
