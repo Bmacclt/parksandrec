@@ -256,7 +256,8 @@ footer {
 .cred  {
    color: green;
     margin-bottom: .1em;
-    margin-top: .5em;
+    margin-top: 2em;
+    font-size: .5em;
 }
 
 .cred a, .cred a:focus, .cred a:visited{
@@ -465,6 +466,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
        }
 }
 
+/* smallest styles */
+/* ========================================================================= */
 @media (max-width:400px){
     .icon-list li {
         width: 15%;
@@ -497,6 +500,19 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
     .form-boxes {
         font-size: 60%;
+    }
+    footer {
+        height: 3em;
+    }
+
+    .cred {
+        font-size: .5em;
+        position: relative;
+        bottom: .3em;
+    }
+
+    .social svg {
+       font-size: 2em;
     }
 }
 /* }

@@ -74,7 +74,7 @@ module.exports = function(app) {
 
   //Individual Feature Page
   //=====================================================
-  app.get("/all-features/:feature", function(req, res) {
+  app.get("/features/:feature", function(req, res) {
     var feature = req.params.feature;
     var whereClause = {};
     console.log(feature);
@@ -134,7 +134,8 @@ module.exports = function(app) {
       order: ["parkName"]
     }).then(function(dbPark) {     
       var hbsObject = {
-        parks: dbPark
+        parks: dbPark,
+        layout: "main"
       };
 
       res.render("feature", hbsObject);
@@ -161,27 +162,6 @@ module.exports = function(app) {
     });
   });
  
-
-  //Individual Feature Page 
-  //=====================================================
-
-  app.get("/:feature", function(req, res) {
-    var feature = req.params.feature;
-    db.AllPark.findAll({
-      where: {
-          feature : true
-      }        
-    }).then(function(dbPark) {     
-    var hbsObject = {
-      parks: dbPark
-    };
-    // console.log(req.params.name);
-    console.log(req.body);
-    console.log(hbsObject);
-            
-    res.render("feature", hbsObject);
-    });
-  });
 
   // API Post
   //======================================================= 
