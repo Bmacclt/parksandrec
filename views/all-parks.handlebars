@@ -6,12 +6,17 @@
 
 <ul class="pure-g">
     {{#each parks}}
-    <div class="pure-u-4-5 a-z">
-        <a href="/{{parkName}}"><h2>{{parkName}}</h2></a>
-        <h6>{{address}}</h6>
-        <h6>Size: {{size}}</h6>
+    <div class="pure-u-4-5 a-z solo" style="background-image: url('./assets/images/parks/{{id}}.jpg');">
+        <div class="info">
+           <a href="/{{parkName}}"><h2>{{parkName}}</h2></a>
+            <h6>{{address}} | Size: {{size}}</h6>
+        </div>
+        
     {{!-- partial for icon list --}}
-        {{> parks/park-block}}
+        {{!-- <div class="pure-u-8-12 .bar"> --}}
+            {{> parks/park-block}}
+        {{!-- </div> --}}
+        
         
     </div>           
     {{/each}}

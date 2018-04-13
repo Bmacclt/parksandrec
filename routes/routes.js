@@ -72,20 +72,41 @@ module.exports = function(app) {
       });
   });
 
-  //Individual Feature Page -- need a features table
+  //Individual Feature Page
   //=====================================================
   app.get("/features/:feature", function(req, res) {
     var feature = req.params.feature;
-      db.AllPark.findAll({ 
-        where:  {feature : true}        
+    console.log(feature);
+    switch(feature) {
+      case "basketball":
+          
+          db.findAll({where:
+            {basketball:true},
+            order: ["parkName"]
+          }).then(function(dbPark) {     
+            var hbsObject = {
+              parks: dbPark
+            };
+            res.render("feature", hbsObject);
+         
+            break;
+
+      case "dogPark":
+      
+      db.findAll({where:
+        {basketball:true},
+        order: ["parkName"]
       }).then(function(dbPark) {     
-      var hbsObject = {
-        parks: dbPark
-      };
-      // console.log(req.params.name);
-      // console.log(hbsObject);
+        var hbsObject = {
+          parks: dbPark
+        };
+        res.render("feature", hbsObject);
+          break;
+     
+    }
+     
               
-      res.render("feature", hbsObject);
+      // res.render("feature", hbsObject);
     });
   });
 

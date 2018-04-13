@@ -227,6 +227,12 @@ small screens.
     margin: 2em auto;
 }
 
+
+
+
+/* Footer & Social Links, Icon credit link */
+/* ===================================================================== */
+
 footer { 
     position: fixed;
     left: 0;
@@ -264,6 +270,7 @@ footer {
 
 
 
+
 /* Form/Index Styles */
 /* =============================================================================== */
 .form-boxes {
@@ -295,13 +302,8 @@ footer {
     border: none;
 }
 
-
-
-/* .add-park .pure-g input {
-    text-align: left;
-} */
-
-
+/*            Icon Stlyes              */
+/* =============================================================================== */
 
 .icon {
     height:2em;
@@ -312,9 +314,21 @@ footer {
     border-radius: 10px;
 }
 
+.icon-list {
+    background-color: rgba(0, 255, 0, 0.4);
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    bottom: .3em;
+    border: .1em solid white;
+    border-radius: .5em;
+
+}
+
 .icon-list li {
     display: inline-block;
 }
+
 
 /* all features list */
 /* ==================================================================== */
@@ -326,7 +340,9 @@ footer {
 
 #all-features img {
    border: 2px solid black;
+   border-radius: .5em;
    float: left;
+   padding: .1em;
 
 }
 
@@ -357,7 +373,27 @@ footer {
     font-weight: bold;
     text-shadow: .1em .1em .1em black;
     background-position: center;
+    background-color:  rgba(30, 167, 26, 0.671);
     
+}
+
+ .solo a:-webkit-any-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* all-parks display */
+/* ========================================================= */
+
+.info {
+    background-color:  rgba(30, 167, 26, 0.671);
+    width: 55%;
+    margin: 0 auto;
+}
+
+.info h6 {
+    position: relative;
+    bottom: 1.5em;
 }
 
 .box {
@@ -423,11 +459,62 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         height: 20em;
         border: 3px solid green;
     }
+
+    .icon {
+        height: 50%;   
+       }
 }
+
+@media (max-width:400px){
+    .icon-list li {
+        width: 15%;
+        margin: 0 .2em;
+        position: relative;
+        right: 1em;
+    }
+    .info {
+        width: 70%;
+    }
+
+    #all-features li {
+        display: inline-block;
+        border: 2px solid green;
+        margin: 1em auto;
+        padding: 1em;
+        text-align: left;
+        position: relative;
+        right: 1em;
+
+    }
+    #all-features li h3 {
+        font-size: 60%;
+        position: relative;
+        left: 1em;
+    }
+    .header {
+        font-size: 70%;
+        margin-top: 2em;
+    }
+    .form-boxes {
+        font-size: 60%;
+    }
+}
+/* }
 
 @media (max-width: 64em){
     
-}
-@media (max-width: 80em){
     
+
 }
+
+@media (max-width: 80em){
+    .solo {
+        height: 12em;
+    }
+}
+
+@media (min-width: 80em){
+    .solo {
+        height: 17em;
+    }
+} */
