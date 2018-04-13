@@ -74,20 +74,59 @@ module.exports = function(app) {
 
   //Individual Feature Page
   //=====================================================
-  app.get("/features/:feature", function(req, res) {
+  app.get("/all-features/:feature", function(req, res) {
     var feature = req.params.feature;
     var whereClause = {};
     console.log(feature);
     switch(feature) {
-      case "basketball":
-          
-        whereClause = {basketball : true}; 
-        break;
+      case "basketball":          
+      whereClause = {basketball : true}; 
+      break;
 
       case "dogPark":
-        whereClause = {dogPark : true};    
-        break;
-         
+      whereClause = {dogPark : true};    
+      break;
+
+      case "golf":
+      whereClause = {golf : true};    
+      break;
+
+      case "handiAceces":
+      whereClause = {handiAceces : true};    
+      break;
+
+      case "playground":
+      whereClause = {playground : true};    
+      break;
+
+      case "soccer":
+      whereClause = {soccer : true};    
+      break;
+
+      case "tennis":
+      whereClause = {tennis : true};    
+      break;
+
+      case "trails":
+      whereClause = {trails : true};    
+      break;
+
+      case "vendingMachines":
+      whereClause = {vendingMachines : true};    
+      break;
+
+      case "views":
+      whereClause = {views : true};    
+      break;
+
+      case "waterSports":
+      whereClause = {waterSports : true};    
+      break;
+
+      case "workoutGear":
+      whereClause = {workoutGear : true};    
+      break;
+        
      
     }
     db.AllPark.findAll({  

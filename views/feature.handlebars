@@ -1,19 +1,5 @@
-<div class="header"> 
-    <h1> Feature </h1>
+<div class="header">
+    <h1>Search by Feature</h1>
 </div>
-<ul class="pure-g">
 
-    {{#each parks}}
-
-    <li class="pure-u-4-5 a-z">
-        <a href="/{{parkName}}"><h2>{{parkName}}</h2></a>
-        <h6>{{address}}</h6>
-        <h6>Acres: {{size}}</h6>
-        {{!-- partial for icon list --}}
-        {{> parks/park-block}}
-        
-    </li> 
-
-    {{/each}}
-   
-</ul>
+{{> parks/feature-block}}
