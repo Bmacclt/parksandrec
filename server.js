@@ -5,7 +5,7 @@ var exphbs = require("express-handlebars");
 var db = require("./models");
 
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 
 // parse application/x-www-form-urlencoded
